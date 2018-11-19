@@ -1,0 +1,16 @@
+.mat-subheading-2 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.mat-form-field {
+  width: 100%;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+  margin-right: -16px;
+}

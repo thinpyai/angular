@@ -1,0 +1,16 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element" [satPopoverAnchorFor]="testPop" (click)="testPop.toggle()">
+      <ng-container *ngIf="element.name">
+        {{element.name}}
+      </ng-container>
+      <sat-popover #testPop verticalAlign="below" forceAlignment [autoFocus]="true"> 
+          <p>test</p>
+      </sat-popover>
+    </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
